@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Exercise</title>
+		<style type="text/css">
+			.container{
+				position: relative;
+				height: 212px;
+			}
+			.container .row{
+				height: 106px;
+				position: absolute;
+			}
+			.container .row:nth-child(odd){
+				top: 0px;
+			}
+			.container .row:nth-child(even){
+				top: 106px;
+			}
+			.container .row:nth-child(odd) > * {
+				vertical-align: top;
+			}
+			.container .row:nth-child(even) > * {
+				vertical-align: bottom;
+			}
+			.container .row .item{
+				margin: 0px;
+				text-align: center;
+			}
+			/*
+			.container .row .item:nth-child(odd){
+				background-color: white;
+				color: black;
+			}
+			.container .row .item:nth-child(even){
+				background-color: black;
+				color: white;
+			}
+			*/
+			.container .row .item{
+				background-color: black;
+				display: inline-block;
+				width: 150px;
+				height: 100px;
+				border: 1px solid black;
+				cursor: pointer;
+				overflow: hidden;
+				
+				transition: all .5s ease; /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+				-o-transition: all .5s ease; /* Opera 10.50–12.00 */
+				-ms-transition: all .5s ease; /* IE 9 */
+				-moz-transition: all .5s ease; /* Firefox 4-15 */
+				-webkit-transition: all .5s ease; /* Chrome 1-25, Safari 3.2+ */
+			}
+			.container .row .item.hovered{
+				margin: 0px;
+				background-color: white;
+				color: white;
+				text-shadow: 1px 1px 5px black;
+				width: 356px;
+				height: 206px;
+			}
+			.container .row:nth-child(even) .item.hovered{
+				margin: -106px 0px 0px 0px;
+			}
+			.container .row .item.expand{
+				margin-left: 362px !important;
+			}
+			.container .row .item.show{
+				visibility: visible;
+				display: inline-block;
+			}
+			.container .row .item.hide{
+				visibility: hidden;
+				display: none;
+			}
+			.container .row .item img{
+				width: 150px;
+				height: 100px;
+				opacity:0.85;
+				filter:alpha(opacity=85);
+				
+				transition: all .5s ease;
+				-o-transition: all .5s ease;
+				-ms-transition: all .5s ease;
+				-moz-transition: all .5s ease;
+				-webkit-transition: all .5s ease;
+			}
+			.container .row .item.hovered img{
+				width: 356px;
+				height: 206px;
+			}
+		</style>
+	</head>
+	<body onLoad="defaultView();">
+		<div>
+			<div class="container" data-container="1">
+				<div class="row" data-container="1" data-row="top">
+					<div class="item" data-container="1" data-row="top" data-position="1">
+						<img src="img/0.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="top" data-position="2">
+						<img src="img/1.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="top" data-position="3">
+						<img src="img/2.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="top" data-position="4">
+						<img src="img/3.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="top" data-position="5">
+						<img src="img/4.gif" />
+					</div>
+				</div>
+				<div class="row" data-container="1" data-row="bottom">
+					<div class="item" data-container="1" data-row="bottom" data-position="1">
+						<img src="img/5.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="bottom" data-position="2">
+						<img src="img/6.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="bottom" data-position="3">
+						<img src="img/7.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="bottom" data-position="4">
+						<img src="img/8.gif" />
+					</div>
+					<div class="item" data-container="1" data-row="bottom" data-position="5">
+						<img src="img/4.gif" />
+					</div>
+				</div>
+			</div>
+			<div class="container position" data-container="2">
+				<div class="row" data-container="2" data-row="top">
+					<div class="item" data-container="2" data-row="top" data-position="1">
+						<img src="img/9.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="top" data-position="2">
+						<img src="img/10.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="top" data-position="3">
+						<img src="img/11.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="top" data-position="4">
+						<img src="img/12.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="top" data-position="5">
+						<img src="img/13.gif" />
+					</div>
+				</div>
+				<div class="row" data-container="2" data-row="bottom">
+					<div class="item" data-container="2" data-row="bottom" data-position="1">
+						<img src="img/14.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="bottom" data-position="2">
+						<img src="img/15.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="bottom" data-position="3">
+						<img src="img/16.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="bottom" data-position="4">
+						<img src="img/17.gif" />
+					</div>
+					<div class="item" data-container="2" data-row="bottom" data-position="5">
+						<img src="img/13.gif" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			function animate(_item){
+				var _row = $('.hovered[data-container="'+_item.attr('data-container')+'"]').attr('data-row') || '';
+				if(_row != '' && _row != _item.attr('data-row')){
+					var _hidden = $('.hide[data-container="'+_item.attr('data-container')+'"][data-position="5"]');
+					var _shown = $('.show[data-container="'+_item.attr('data-container')+'"][data-position="5"]');
+					_hidden.removeClass('hide').addClass('show');
+					_shown.removeClass('show').addClass('hide');
+				}
+				$('.item[data-container="'+_item.attr('data-container')+'"]').removeClass('hovered');
+				_item.addClass('hovered');
+				$('.item[data-container="'+_item.attr('data-container')+'"]').removeClass('expand');
+				$('.item[data-container="'+_item.attr('data-container')+'"][data-row!="'+_item.attr('data-row')+'"][data-position="'+_item.attr('data-position')+'"]').addClass('expand');
+			}
+			function defaultView(){
+				$('.item[data-row="top"][data-position="5"]').addClass('show');
+				$('.item[data-row="bottom"][data-position="5"]').addClass('hide');
+				$('.item[data-row="top"][data-position="1"]').each(function(){
+					animate($(this));
+				});
+			}
+			$('.item').hover(function(){
+				animate($(this));
+			});
+		</script>
+	</body>
+</html>

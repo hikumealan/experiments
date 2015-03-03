@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <style type="text/css">
+            [ng\:cloak], [ng-cloak], [ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                display: none !important;
+            }
+
+            body{
+                min-width: 480px;
+            }
+            md-toolbar.md-default-theme{
+                background-color: transparent;
+                color: #000;
+            }
+            /*
+            md-tabs.md-default-theme .md-header{
+                background-color: #e8e8e8;
+            }
+            md-tabs.md-default-theme md-tab{
+                background-color: #e8e8e8;
+                color: #000;
+            }
+            md-tabs.md-default-theme md-tab.active{
+                background-color: #235a9b;
+                color: #fff;
+            }
+            #tab1-content{
+                background-color: red;
+            }
+            */
+        </style>
+        <!--
+        <link rel="stylesheet" href="css/main.css">
+        -->
+    </head>
+    <body ng-init="initialized=true;">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div ng-hide="initialized" style="text-align:center;">
+            <h1><i class="fa fa-spinner fa-pulse"></i> Loading ... </h1>
+        </div>
+        <div ng-show="initialized" class="ng-cloak" ng-cloak>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h3>LDNG</h3>
+                </div>
+            </md-toolbar>
+            <md-tabs md-selected="data.selectedIndex" ng-init="tabs=[{label:'Home'}, {label:'Pools'}, {label:'Commitments'}, {label:'Imports'}, {label:'Settings'}, {label:'Internal'}];">
+                <md-tab ng-repeat="tab in tabs" id="tab{{$index+1}}" aria-controls="tab{{$index+1}}-content">
+                    {{tab.label}}
+                </md-tab>
+            </md-tabs>
+            <ng-switch on="data.selectedIndex" class="tabpanel-container">
+                <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()" >
+                    View for Item #1<br/>
+                    data.selectedIndex = 0
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                </div>
+                <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()" >
+                    View for {{data.selectedIndex}}<br/>
+                    data.selectedIndex = 1
+                </div>
+                <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()" >
+                    View for Item #3<br/>
+                    data.selectedIndex = 2
+                </div>
+            </ng-switch>
+        </div>
+
+        <script language="javascript">
+            window.onload = function() {
+              window.initialized = true;
+            };
+            (function(){
+                var protocol = window.location.protocol !== 'https:' ? 'http:' : 'https:';
+                var load = function(asset, type){
+                    var extension = asset.length > 3 ? asset.substr(asset.length - 3) : asset;
+                    var script = document.createElement('script');
+                    script.language = 'javascript';
+                    var link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    if(typeof type === 'undefined' && extension.length > 0){
+                        type = extension === '.js' ? 'script' : 'stylesheet';
+                    }
+                    switch(type.toLowerCase()){
+                        case 'script':
+                            if(window.initialized){
+                                script.src = asset;
+                                document.body.appendChild(script);
+                            }
+                            else{
+                                document.write('<script src="'+asset+'"><\/script>');
+                            }
+                        break;
+                        case 'stylesheet':
+                            if(window.initialized){
+                                link.href = asset;
+                                document.getElementsByTagName('head')[0].appendChild(link);
+                            }
+                            else{
+                                document.write('<link rel="stylesheet" href="'+asset+'">');
+                            }
+                        break;
+                        default:
+                            // 
+                        break;
+                    }
+                };
+
+                var Modernizr = function(){
+                    var version = '2.8.3';
+                    var modernizr = protocol+'//cdnjs.cloudflare.com/ajax/libs/modernizr/'+version+'/modernizr';
+                    load(modernizr+'.min.js');
+                };
+
+                var Angular = function(){
+                    var version = '1.3.14'; // '1.2.27';
+                    var angular = protocol+'//ajax.googleapis.com/ajax/libs/angularjs/'+version+'/angular';
+                    load(angular+'.min.js');
+                    load(angular+'-animate.min.js');
+                    load(angular+'-aria.min.js');
+                    load(angular+'-cookies.min.js');
+                    load(angular+'-loader.min.js');
+                    load(angular+'-messages.min.js');
+                    load(angular+'-resource.min.js');
+                    load(angular+'-route.min.js');
+                    load(angular+'-sanitize.min.js');
+                    load(angular+'-touch.min.js');
+                };
+
+                var Material = function(){
+                    var version = '0.7.1';
+                    var material = protocol+'//ajax.googleapis.com/ajax/libs/angular_material/'+version+'/angular-material.min';
+                    load(material+'.css');
+                    load(material+'.js');
+                };
+
+                var Application = function(){
+                    document.getElementsByTagName('html')[0].setAttribute('ng-app', 'capco');
+                    var version = '0.0.1';
+                    var application = 'app/app';
+                    // load(application+'.css');
+                    load(application+'.js');
+                };
+
+                // setTimeout(function(){
+                    Modernizr();
+                    Angular();
+                    Material();
+                    Application();
+                // }, 1000);
+            })();
+        </script>
+    </body>
+</html>
